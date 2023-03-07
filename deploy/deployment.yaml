@@ -1,0 +1,25 @@
+# POD - API configuration (with Google Endpoints)
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-encuesta
+spec:
+  # Number of replicas
+  replicas: 1
+  selector:  
+   matchLabels:  
+    app: front-encuesta
+  template:
+    metadata:
+      labels:
+        app: front-encuesta
+        tier: frontend
+    spec:
+      containers:
+        #nombre del contenedor
+      - name: front-encuesta
+        #ruta de imagen en container registry
+        image: gcr.io/jovial-duality-191812/apiusers/frontencuesta:0.1
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 80
