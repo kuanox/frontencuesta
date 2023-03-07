@@ -1,4 +1,4 @@
-# Pokémon
+# Encuesta
 
 Este proyecto se generó con [Angular CLI](https://github.com/angular/angular-cli) versión 15.1.0.
 
